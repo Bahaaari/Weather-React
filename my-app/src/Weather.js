@@ -6,10 +6,11 @@ import "./Weather.css";
 
 export default function Weather(props) {
   let [city, setCity] = useState(props.defaultCity);
-  let [weatherData, setWeatherData] = useState();
+  let [weatherData, setWeatherData] = useState({ ready: false });
 
   function fetchData(response) {
     setWeatherData({
+      ready: true,
       cityName: response.data.name,
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
@@ -54,13 +55,15 @@ export default function Weather(props) {
       </div>
     </form>
   );
-
-  return (
-    <div>
-      {form}
-      <WeatherInfo data={weatherData} />
-
-      <WeatherForcast coordinates={weatherData.coordinates} />
-    </div>
-  );
+  if (weatherData.ready) {
+    return (
+      <div>
+        {form}
+        <WeatherInfo data={weatherData} />
+        <WeatherForcast coordinates={weatherData.coordinates} />
+      </div>
+    );
+  } else {
+    search();
+  }
 }
