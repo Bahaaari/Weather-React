@@ -11,11 +11,19 @@ function App() {
         </div>
         <footer>
           This project was coded by{" "}
-          <a href="#" target="_blank" rel="noreferrer">
+          <a
+            href="https://www.linkedin.com/in/bahareh-babaei-8b0b1653/"
+            target="_blank"
+            rel="noreferrer"
+          >
             Bahareh Babaei
           </a>{" "}
           and is{" "}
-          <a href="#" target="_blank" rel="noreferrer">
+          <a
+            href="https://github.com/Bahaaari/Weather-React"
+            target="_blank"
+            rel="noreferrer"
+          >
             open-sourced on Githab
           </a>
         </footer>
