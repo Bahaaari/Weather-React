@@ -38,7 +38,7 @@ export default function Weather(props) {
   }
 
   let form = (
-    <form className="mb-3" onSubmit={handleSubmit}>
+    <form className="mt-2" onSubmit={handleSubmit}>
       <div className="row">
         <div className="col-9">
           <input
@@ -46,6 +46,7 @@ export default function Weather(props) {
             placeholder="Enter a city ..."
             className="form-control"
             id="search-input"
+            outoFocus="on"
             onChange={updateCity}
           />
         </div>
@@ -57,7 +58,7 @@ export default function Weather(props) {
   );
   if (weatherData.ready) {
     return (
-      <div>
+      <div className="weather">
         {form}
         <WeatherInfo data={weatherData} />
         <WeatherForcast coordinates={weatherData.coordinates} />
