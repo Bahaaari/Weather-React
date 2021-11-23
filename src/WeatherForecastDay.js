@@ -1,4 +1,5 @@
 import React from "react";
+import "./WeatherForecastDay.css";
 
 export default function WeatherForecastDay(props) {
   let iconUrl = `https://openweathermap.org/img/wn/${props.data.weather[0].icon}@2x.png`;
@@ -15,13 +16,13 @@ export default function WeatherForecastDay(props) {
 
   function formatDay() {
     let date = new Date(props.data.dt * 1000);
-    let day = date.getDate();
+    let day = date.getDay();
     let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
     return days[day];
   }
 
   return (
-    <div>
+    <div className="weatherForecast">
       <div className="weatherForecastDay">{formatDay()}</div>
       <img src={iconUrl} alt="forecast" width="42" />
       <div className="weather-forecast-temperature">

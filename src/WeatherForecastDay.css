@@ -1,0 +1,26 @@
+:root {
+  --background-color: #fbfbfd;
+  --primary-color: #f5f5f7;
+  --branding-color: #0e75a9;
+  --heading-font-color: #202124;
+  --font-color: #878787;
+  --default-font-family: "Poppins", sans-serif;
+  --heading-font-family: "Playfair Display", serif;
+}
+
+.weatherForecast {
+  text-align: center;
+}
+
+.weather-forecast-temperature {
+  font-size: 13px;
+}
+
+.weatherForecastDay,
+.forecast-temperature-max {
+  color: var(--heading-font-color);
+}
+
+.forecast-temperature-min {
+  color: var(--font-color);
+}
