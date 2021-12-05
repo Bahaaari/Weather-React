@@ -23,4 +23,5 @@
 
 .forecast-temperature-min {
   color: var(--font-color);
+  margin-left: 5px;
 }
